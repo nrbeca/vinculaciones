@@ -490,9 +490,9 @@ else:
                 st.error("No se encontraron registros válidos en el archivo")
                 st.info("El archivo debe tener formato PIPP o columnas nombradas como Pp/Programa y Partida/Objeto")
             else:
-                st.info(f"📋 **{len(datos)}** registros encontrados")
+                st.info(f" **{len(datos)}** registros encontrados")
                 
-                if st.button("🔍 Validar registros", type="primary"):
+                if st.button(" Validar registros", type="primary"):
                     resultados = validar_registros(datos, partidas_por_pp)
                     
                     # Estadísticas
@@ -546,7 +546,7 @@ else:
                     # Botón de descarga
                     excel_output = generar_excel_resultados(resultados)
                     st.download_button(
-                        label="📥 Descargar resultados (.xlsx)",
+                        label=" Descargar resultados (.xlsx)",
                         data=excel_output,
                         file_name="Validacion_Pp_Partida.xlsx",
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
