@@ -341,7 +341,7 @@ st.markdown("""
 
 # Sidebar - Cargar catálogo
 with st.sidebar:
-    st.markdown("### 📁 Catálogo Base")
+    st.markdown("### Catálogo Base")
     st.caption("Sube el archivo `Pp_-_Partida_Especifica_2026.xlsx`")
     
     catalogo_file = st.file_uploader(
@@ -356,12 +356,12 @@ with st.sidebar:
         st.success(f"✓ Catálogo cargado")
         
         st.markdown("---")
-        st.markdown("### 📊 Estadísticas")
+        st.markdown("### Estadísticas")
         st.metric("Programas (Pp)", len(partidas_por_pp))
         st.metric("Total partidas", sum(len(v) for v in partidas_por_pp.values()))
         
         st.markdown("---")
-        st.markdown("### 📋 Pps disponibles")
+        st.markdown("### Pps disponibles")
         pps_lista = sorted(partidas_por_pp.keys())
         st.text_area(
             "Lista de Pps",
@@ -372,12 +372,12 @@ with st.sidebar:
 
 # Contenido principal - Tabs
 if 'partidas_por_pp' not in dir() or not catalogo_file:
-    st.info("👈 **Primero sube el catálogo** `Pp_-_Partida_Especifica_2026.xlsx` en la barra lateral")
+    st.info(" **Primero sube el catálogo** `Pp_-_Partida_Especifica_2026.xlsx` en la barra lateral")
 else:
     tab1, tab2, tab3 = st.tabs([
-        "🔍 Consulta Individual",
-        "📋 Validación Masiva",
-        "📖 Explorar Catálogo"
+        " Consulta Individual",
+        " Validación Masiva",
+        " Explorar Catálogo"
     ])
     
     # ══════════════════════════════════════════════════════════════════════════
